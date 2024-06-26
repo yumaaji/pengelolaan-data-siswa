@@ -3,10 +3,11 @@
 namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
-use CodeIgniter\Validation\StrictRules\CreditCardRules;
+use CodeIgniter\Validation\StrictRules\Rules;
 use CodeIgniter\Validation\StrictRules\FileRules;
 use CodeIgniter\Validation\StrictRules\FormatRules;
-use CodeIgniter\Validation\StrictRules\Rules;
+use CodeIgniter\Validation\StrictRules\CreditCardRules;
+use Myth\Auth\Authentication\Passwords\ValidationRules;
 
 class Validation extends BaseConfig
 {
@@ -24,7 +25,10 @@ class Validation extends BaseConfig
         Rules::class,
         FormatRules::class,
         FileRules::class,
+
+        // myth/auth
         CreditCardRules::class,
+        ValidationRules::class
     ];
 
     /**
