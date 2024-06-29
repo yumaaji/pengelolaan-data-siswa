@@ -8,7 +8,10 @@ use CodeIgniter\HTTP\ResponseInterface;
 class Dashboard extends BaseController
 {
     public function index()
-    {
-        return "hallo";
+    {   $data = [
+            'title' => 'Dashboard',
+        ];
+
+        return view('dashboard', $data);
     }
 }

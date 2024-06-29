@@ -10,7 +10,7 @@
       <div id="main">
         <?= $this->include('layouts/navbar') ?>
         <div class="page-content">
-          <?= $this->include('layouts/content') ?>
+          <?= $this->renderSection('content') ?>
         </div>
         <?= $this->include('layouts/footer') ?>
       </div>

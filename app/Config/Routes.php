@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Auth::login');
+$routes->get('/', 'Home::index');
 $routes->post('/', 'Auth::logout');
 $routes->get('/dashboard', 'Dashboard::index');
 
@@ -20,7 +20,9 @@ $routes->get('/dashboard/datakelas/edit/(:segment)', 'Kelas::edit');
 $routes->get('/dashboard/datakelas/update/(:segment)', 'Kelas::update');
 
 $routes->get('/dashboard/dataguru', 'Guru::index');
-$routes->get('/dashboard/dataguru/(:segment)', 'Guru::detail');
-$routes->get('/dashboard/dataguru/edit/(:segment)', 'Guru::edit');
-$routes->get('/dashboard/dataguru/update/(:segment)', 'Guru::update');
+$routes->get('/dataguru/create', 'Guru::create');
+$routes->post('/dataguru/store', 'Guru::store');
+$routes->get('/dataguru/(:segment)', 'Guru::detail');
+$routes->get('/dataguru/edit/(:segment)', 'Guru::edit');
+$routes->post('/dataguru/update/(:segment)', 'Guru::update');
 
